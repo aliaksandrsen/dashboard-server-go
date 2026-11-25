@@ -1,0 +1,29 @@
+info:
+  name: Create Product
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: '{{baseUrl}}/v1/products'
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Fullstack JavaScript Book",
+        "price": 49.99,
+        "description": "Comprehensive guide to fullstack JavaScript development"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
+
+docs: Create a new product. When stripeProductId is omitted, it automatically registers the product and price in Stripe, then saves the product to PostgreSQL with the generated stripeProductId.

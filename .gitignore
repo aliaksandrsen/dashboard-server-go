@@ -1,0 +1,35 @@
+# Binaries & build outputs
+/bin
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+
+# Environment files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# IDEs
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Temp & coverage
+.tmp/
+coverage.out
